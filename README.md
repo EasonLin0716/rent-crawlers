@@ -22,6 +22,21 @@ for personal usage.
 
 ## how to use
 
+### 信義房屋
+
+1. Create `.env` in root folder.
+2. Go to https://www.sinyi.com.tw/rent/list and filter your conditions.
+3. Copy url and paste to `.env` like this:
+
+```
+SINYI_FILTER_URL=<Your url>
+```
+4. Open terminal and enter this command:
+```
+python3 app/sinyi/crawler_selenium.py
+```
+5. Result will be located at: `static/sinyi.html`
+
 ### 591
 
 1. Create `.env` in root folder.
