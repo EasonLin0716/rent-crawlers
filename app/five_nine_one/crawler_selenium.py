@@ -108,6 +108,7 @@ def main():
         print('Example: 591_FILTER_URL=https://rent.591.com.tw/list?keywords=古亭&price=10000_20000')
         sys.exit()
     soup = get_page_content(driver, start_url)
+    driver.execute_script('new Array(999).fill(0).forEach((_, i) => clearInterval(i))')
     time.sleep(1)
     write_recommends(soup)
     write_normal(driver, soup, start_url)

@@ -8,7 +8,6 @@ def use_disable_chrome_annoyings():
     options.add_argument('--disable-notifications')
     options.add_argument('--disable-infobars')
     options.add_argument('--disable-extensions')
-    options.add_experimental_option("prefs", {"profile.managed_default_content_settings.javascript": 2})
     return options
 
 def get_page_content(driver, url):
