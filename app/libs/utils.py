@@ -8,7 +8,6 @@ def use_disable_chrome_annoyings():
     options.add_argument('--disable-notifications')
     options.add_argument('--disable-infobars')
     options.add_argument('--disable-extensions')
-    options.add_experimental_option("prefs", {"profile.managed_default_content_settings.javascript": 2})
     return options
 
 def get_page_content(driver, url):
@@ -27,3 +26,9 @@ def use_selenium():
     driver = webdriver.Chrome(options=options)
     driver.implicitly_wait(10)
     return driver
+
+def render_link(link, title):
+    return f'<a href="{link}" target="_blank">{title}</a>'
+
+def render_images(image_list):
+    return ''.join([f'<img src="{img}" width="100" />' for img in image_list])
