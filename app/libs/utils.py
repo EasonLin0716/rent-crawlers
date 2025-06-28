@@ -17,7 +17,7 @@ def get_page_content(driver, url):
     return soup
 
 def write_file(output, file_name):
-    with open(f'static/{file_name}', 'w') as f:
+    with open(f'static/{file_name}', 'w', encoding='utf-8') as f:
         f.write(output)
         return True
 
